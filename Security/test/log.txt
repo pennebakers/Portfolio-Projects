@@ -1,0 +1,22 @@
+File Rename: virus.exe_ ->  : virus.exe 
+File Rename: ScapeGoat\ScapeGoat01.docx ->  : ScapeGoat\23037713.crc32 
+File Modify: ScapeGoat
+File Modify: ScapeGoat\23037713.crc32
+File Rename: ScapeGoat\ScapeGoat02.docx ->  : ScapeGoat\9138a4ea.crc32 
+File Modify: ScapeGoat
+File Modify: ScapeGoat\9138a4ea.crc32
+File Rename: ScapeGoat\ScapeGoat03.docx ->  : ScapeGoat\15f90b94.crc32 
+File Modify: ScapeGoat
+File Modify: ScapeGoat\15f90b94.crc32
+File Rename: ScapeGoat\ScapeGoat04.docx ->  : ScapeGoat\82a92afd.crc32 
+File Modify: ScapeGoat
+File Modify: ScapeGoat\82a92afd.crc32
+File Rename: ScapeGoat\ScapeGoat05.docx ->  : ScapeGoat\e7c631db.crc32 
+File Modify: ScapeGoat
+File Modify: ScapeGoat\e7c631db.crc32
+File Create: readme.txt
+File Modify: readme.txt
+File Create: delself.cmd
+File Modify: delself.cmd
+File Delete: virus.exe
+File Delete: delself.cmd
