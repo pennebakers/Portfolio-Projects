@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">    
+    <div class="col-md-6 col-md-offset-3 loginBox">    
+        Welcome,  {{username}}    
+        <a href="javascript:void(0);" (click)="logout()">Logout</a>    
+    </div>    
+  </div>  
+<div id="dashboard" class="grid-container">
+    <app-employee-tabs></app-employee-tabs>
+
+    <div id="contentHolder">
+        <h2 class="heading">Reimbursements 101</h2>
+        <h5 class="subheading">Read on to learn the ins and outs of your organization's tuition reimbursement program.</h5>
+        <p class="taleft">    Good news! Your organization offers tuition reimbursement as an aid to help employees further their career-related education.
+            Each employee may claim up to $1000.00 in tuition reimbursements per calendar year. Reimbursements can cover a percentage of the cost of:
+        </p>
+        <ul class="taleft">
+            <li>University courses (80%)</li>
+            <li>Seminars (60%)</li>
+            <li>Certification preparation classes (75%)</li>
+            <li>Certifications (100%)</li>
+            <li>Technical training (90%)</li>
+            <li>Other educational events (30%)</li>
+        </ul>
+        <p class="taleft"> In order to apply for tuition reimbursement, simply select the 'Create Reimbursement Request' tab on the left and complete the reimbursement
+            request form <strong>at least one week prior to your event's start date.</strong>
+
+        </p>
+        <p class="taleft"> After submission, your request will need to be reviewed and approved by your direct supervisor, then by your department head, and finally, by the Benefits Coordinator.
+            If the request is approved by the Benefits Coordinator, you will be expected to submit a grade or presentation demonstrating knowledge and skills gained 
+            from the event. Once this submission has been reviewed and confirmed to satisfy all requirements, your reimbursement will be awarded.
+
+        </p>
+    </div>
+</div>   

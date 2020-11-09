@@ -1,0 +1,253 @@
+body {
+    background-image: url("pencils.jpg");
+    background-position: center;
+    background-position-y: 40%;
+    background-size: cover;
+    text-align: center;
+}
+
+.fright {
+    float: right;
+}
+
+.fleft {
+    float: left;
+}
+
+.taleft {
+    text-align: left;
+}
+
+#navbar {
+    background-color: #001933;
+    height: 35px;
+    width: 100%;
+    padding: 7px 10px 5px;
+}
+
+#brand {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    float: left;
+    color: white; 
+    letter-spacing: 2px;
+}
+
+#rightNavbar {
+    float: right;
+    margin-top: -4px;
+    height: 33px;
+}
+
+li.nav{
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+}
+
+#greeting {
+    color: white;
+}
+
+#failedLogin {
+    color: red;
+    margin-top: 30px;
+    margin-left: -4%;
+}
+
+#logout {
+    background-color: #001933;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 12px;
+    padding-bottom: 4px;
+    margin-top: -2px;
+}
+
+button {
+    background-color: #001933;
+    color: #f7f7f7;
+    border: none;
+}
+
+button:hover {
+    background-color: #020e21;
+}
+
+h1 {
+    margin-top: 12rem;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+}
+
+#subheading {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: -.75in;
+    margin-bottom: 0.25in;
+}
+
+.signIn {
+    height: 40px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+form {
+    display: inline-block;
+}
+
+input {
+    margin-right: 20px;
+    height: 40px;
+    border-radius: 3px;
+    border:none;
+}
+
+input:focus {
+    outline: none !important;
+    border: 3px solid #5eb9e0;
+    box-shadow: 0 0 10px #719ECE;
+    
+}
+label {
+    display: inline-block;
+    text-align: right;
+    font-size: 20px;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.bg-dark {
+    background-color: #001933!important;
+}
+
+.dashboardTab {
+    border: none;
+    height: 1.5in;
+    width: 2in;
+    float: left;
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 1px 4px black;
+}
+
+.supDashboardTab {
+    border: none;
+    height: 3.03in;
+    width: 2in;
+    float: left;
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 1px 4px black;
+}
+
+#dashboard {
+    height: 6in;
+    width: 80%;
+    margin: 7% 10% 3%; 
+    box-shadow: -1px 3px 30px 1px black;
+}
+
+#tabs td {
+    border: 2px solid #6a717d;
+    border-right: none;
+    padding: 0px;
+}
+
+#contentHolder {
+    height: 100%;  
+    width: 100%;
+    background-color:#F5F9FF;
+    float: inline-start;
+    padding: 20px 20px;
+    overflow: scroll!important;
+    text-align: center;
+    max-height: 6.09in;
+}
+
+.heading {
+    text-align: center;
+}
+
+.subheading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contents p {
+    text-align: left;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 100fr;
+    grid-gap: 0px;
+}
+
+.rform {
+    font-size: 12pt;
+}
+
+.attachments {
+    text-align: left;
+}
+
+#tiny {
+	font-size: 13px;
+}
+
+.bottomrow {
+
+    display: inline;
+}
+
+#upload {
+    margin-top: 15%;
+}
+
+.supTable {
+    width: 200%;
+    border: 2px solid grey;
+}
+
+.supTable th {
+    padding: 10px;
+    min-width: .7in;
+    border: 3px solid grey;
+    text-align: center;
+}
+
+.supTable td {
+    padding: 10px;
+    border: 3px solid grey;
+}
+
+.supTable tr:nth-child(odd) {
+    background-color: #c7c6f7;
+}
+
+.supTable tr:nth-child(even) {
+    background-color: #e8e8ff;
+}
+
+.contain {
+    max-width: 80%;
+}
+
+/* This formatting makes tabs disappear in Angular */
+/* #grades {
+    width: fit-content;
+} */
+
+

@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+<div id="dashboard" class="grid-container">
+    <app-employee-tabs></app-employee-tabs>
+
+    <div id="contentHolder">
+        <h2 class="heading">Tuition Reimbursement Request Form</h2>
+        <h5 class="subheading">Please complete and submit the following form in order to request tuition reimbursement.</h5>
+        <form method="post" action="submitRequest" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" name="firstName" placeholder="First name" required>
+                </div>
+                <div class="form-group col">
+                  <input type="text" class="form-control" name="lastName" placeholder="Last name" required>
+                </div>
+            </div>
+            <h5>-- Event Details --</h5>
+            <div class="form-row">
+                <div class="form-group col">
+                  <input type="date" class="form-control" name="eventDate" required>
+                </div>
+                <div class="form-group col">
+                    <input type="time" class="form-control" name="eventTime" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" name="location" placeholder="123 Main St, Townsville, Texas 75007" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="cost" class="rform">Cost:</label>
+                    <input nametype="number" class="form-control" name="cost" placeholder="0.00" required>
+                </div>
+                <div class="form-group col">
+                    <label for="eventType" class="rform">Event Type:</label>
+                    <select class="form-control" name="eventType" required>
+                        <option>University course</option>
+                        <option>Seminar</option>
+                        <option>Certification prep</option>
+                        <option>Certification</option>
+                        <option>Technical training</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <p class="rform">Grading Format:</p>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="grade" name="gradingFormat" value="grade">
+                        <label for="grade" class="custom-control-label rform">Grade</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="presentation" name="gradingFormat" value="presentation"> 
+                        <label for="presentation" class="custom-control-label rform">Presentation</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="description" class="rform">Event Description:</label>
+                    <textarea class="form-control" name="description" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="justification" class="rform">Work-Related Justification:</label>
+                    <textarea class="form-control" name="justification" rows="3" required></textarea>
+                </div>
+            </div>
+            <h5>-- Optional Information --</h5>
+            <div class="form-row">
+                <div class="form-group col attachments">
+                    <label for="eventFile" class="rform">Event-related attachments:</label>
+                    <input type="file" name="file" class="form-control-file" accept=".pdf, .png, .jpeg, .txt, .doc" multiple>
+                    <p id="tiny" style="font-size: 13px">(.pdf, .png, .jpeg, .txt, or .doc)<br>
+                        Tip: Use Ctrl + click to select multiple files
+                    </p>
+                </div>
+                <div class="form-group col attachments">
+                    <label for="approvalFile" class="rform">Reimbursement approval (.msg only):</label>
+                    <input type="file" name="file" class="form-control-file" accept=".msg">
+                </div>
+                <div class="form-group col">
+                    <label for="missedHours" class="rform">Missed work time (in hours):</label>
+                    <input type="number" name="missedHours" class="form-control-file">
+                </div>
+            </div>
+            <div class="form-row bottomrow">
+                <div class="form-group col">
+                    <input type="submit" class="form-control">
+                </div>
+            </div>
+        </form>
+       
+    </div>
+</div> 

@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<div id="dashboard" class="grid-container">
+    <app-supervisor-tabs></app-supervisor-tabs>
+
+    <div id="contentHolder">
+        <h2 class="heading">Pending Reimbursement Requests</h2>
+        <h5 class="subheading">Please select reimbursement requests to approve or deny.</h5>
+        <div class="form-row">
+            <div class="form-group col attachments">
+                <table class="supTable">
+                <tr>
+                    <th></th>
+                    <th>Request ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Event Type</th>
+                    <th>Cost</th>
+                    <th>Description</th>
+                    <th>Work-Related Justification</th>
+                    <th>Event Date</th>
+                    <th>Event Time</th>
+                    <th>Event Location</th>
+                    <th>Grading Format</th>
+                    <th>Reimbursement Amount</th>
+                    </tr>
+                    <tr *ngFor="let request of filteredRequests">
+                        <td><input (change)="FieldsChange($event,request['id'])" value="angular" type="checkbox"/></td>
+                        <td>{{request["id"]}}</td>
+                        <td>{{request["firstName"]}}</td>
+                        <td>{{request["lastName"]}}</td>
+                        <td>{{request["eventType"]}}</td>
+                        <td>{{request["cost"]}}</td>
+                        <td>{{request["description"]}}</td>
+                        <td>{{request["justification"]}}</td>
+                        <td>{{request["eventDate"]}}</td>
+                        <td>{{request["eventTime"]}}</td>
+                        <td>{{request["location"]}}</td>
+                        <td>{{request["gradingFormat"]}}</td>
+                        <td>{{request["projectedAmount"]}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <h5 class="taleft">Would you like to APPROVE or DENY the selected request(s)?</h5>
+                <select [(ngModel)]="action" class="form-control contain" name="verdict">
+                    <option>Approve</option>
+                    <option>Deny</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <button class='form-control' (click)='submit()'>Submit</button>
+            </div>
+        </div>            
+    </div>
+</div>

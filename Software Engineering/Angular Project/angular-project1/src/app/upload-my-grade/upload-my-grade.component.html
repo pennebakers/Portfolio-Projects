@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+<div id="dashboard" class="grid-container">
+    <app-employee-tabs></app-employee-tabs>
+
+    <div id="contentHolder">
+        <h2 class="heading">Upload Grade/Presentation</h2>
+        <h6 class="subheading">Please select the reimbursement request you would like to submit a grade/presentation
+            for, then select grading format.</h6>
+        <div class="form-row">
+            <div class="form-group col attachments">
+                <table class="supTable" id="grades">
+                    <tr>
+                        <th></th>
+                        <th>Request ID</th>
+                        <th>Event Date</th>
+                        <th>Event Type</th>
+                        <th>Description</th>
+                        <th>Grading Format</th>
+                    </tr>
+                    <tr *ngFor="let request of filteredRequests">
+                        <td><input (change)="FieldsChange($event,request['id'])" value="angular" type="checkbox" /></td>
+                        <td>{{request["id"]}}</td>
+                        <td>{{request["eventDate"]}}</td>
+                        <td>{{request["eventType"]}}</td>
+                        <td>{{request["description"]}}</td>
+                        <td>{{request["gradingFormat"]}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col attachments">
+                <h6>Grading Format:</h6>
+                <select class="form-control" name="gradingFormat" required>
+                    <option>Grade</option>
+                    <option>Presentation</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <input type="file" name="gradeFile" class="form-control-file" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <input type="submit" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>

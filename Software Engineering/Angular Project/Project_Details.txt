@@ -1,0 +1,111 @@
+Provides Reimbursements to:
+	-university courses
+	-seminars
+	-certification preparation classes
+	-certifications
+	-techinical training.
+
+
+
+
+1.1)Business Rules:
+	-Each Employee can claim up to $1000 each year
+	-Resets on the new year.
+
+	-Event Types have different reimbursment coverage
+		-University Courses 80%
+		-Seminars 60%
+		-Certification Preparation Classes 75%
+		-Certification 100%
+		-Technical Training 90%
+		-Other 30%
+
+	-After BenCo has approved a reimbursment, the reimbursement is pending 
+	until a passing grade or presentation over the event is provided
+	
+	-Monetary Amount Available for an employee to reimburse is defined..
+		-AvailableReimburstment = TotalReimburstment($1000)-PendingReimburstments - AwardedReimburstments.
+		
+		-if the projected reimbursement for an event exceeds the available amount 
+		it is adjusted to the amount available.
+
+		-Reimbursements do not cover course materials such as books.
+
+
+
+2)Complete The Tuition Reimbursement Form:
+	-FORM MUST BE COMPLETED 1 WEEK BEFORE EVENT!!!
+		-If not completed 1 week before event, we can just "toss out" the form.
+
+	-Information Needed
+		-basic employee information
+		-date
+		-time
+		-location
+		-description
+		-cost
+		-grading format
+		-type of event (work related justification, reread that part)
+
+		-EMPLOYEE CAN OPTIONALLY INCLUDE IN FORM
+			-event-related attachments of pdf,png,jpeg,txt, or doc file type
+			-attachments of approvals already provided of .msg(outlook email) file type
+			-type of approval
+			-work time that will be missed
+		
+	-The Projected reimbursment should be provided as a read-only field.
+
+
+2.1)Business Rules
+	-Grading Formats are pulled from a reference table
+
+	-Certain grading formats require the employee to perform a presentation to 
+	management after the event’s completion and prior to awarded reimbursement
+		-A passing grade is needed for reimbursement otherwise.
+
+	-Employee must provide the passing grade cutoff for the course, or choose to use a 
+	default passing grade if unknown.
+		-If an employee provides an approval email, that approval step is skipped (cannot skip BenCo Approval).
+	
+	-If the course is < 2 weeks from beginning, the request is marked urgent.
+
+
+3)Direct Supervisor Approval
+	-The direct supervisor must provide approval for Tuition Reimbursement.  The Direct Supervisor can 
+	request additional information from the employee before approval. 
+
+	
+	3.1)Business Rules
+		-If denied, the Direct Supervisor must provide a reason.  
+		-If the direct supervisor is also a department head, then the department head approval is skipped.  
+		-If the direct supervisor does not complete this task in a timely matter, the request is auto-approved. 
+
+4)Department Head Approval
+	-The department head must provide approval for Tuition Reimbursement. 
+        -The Department Head can request additional information from the employee or direct supervisor before approval.
+
+	
+	4.1)Business Rules
+		-If the Department Head does not complete this task in a timely matter, the request is auto-approved.
+
+5)Benefits Coordinator Approval
+	-The BenCo must provide approval for Tuition Reimbursement
+	-This stage is not skippable for any reason.
+	-The BenCo can request additional information from the employee, direct supervisor, or department head before approval.
+	-The BenCo has the ability to alter the reimbursement amount.
+
+	
+	5.1)Business Rules
+		-If the BenCo changes the reimbursement amount, the Employee should be notified and given the option to cancel the request.
+		-If the BenCo does not approval in a timely matter, an escalation email should be sent to the BenCo’s direct supervisor.
+		-The BenCo is allowed to award an amount larger than the amount available for the employee. 
+			-The BenCo must provide reason for this, and the reimbursement must be marked as exceeding available funds for reporting purposes.
+
+6)Grade/Presentation Upload
+	-Upon completion of the event, the employee should attach either the Grade or Presentation as appropriate.
+		-After upload of a grade, the BenCo must confirm that the grade is passing.
+	-After upload of a presentation, the direct manager must confirm that the presentation was satisfactory and presented to the appropriate parties.
+		-Upon confirmation, the amount is awarded to the requestor.
+
+			-6.1)Business Rules
+				-Only interested parties should be able to access the grades/presentations.  Interested parties include the requestor and approvers. 

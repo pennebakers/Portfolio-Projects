@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<div id="dashboard" class="grid-container">
+    <app-employee-tabs></app-employee-tabs>
+
+    <div id="contentHolder">
+        <h2 class="heading">Past Requests</h2>
+        <h5 class="subheading">View your previously reimbursement requests below. You may also cancel a request.</h5>
+        <div class="form-row">
+            <div class="form-group col attachments">
+                <table class="supTable" id="RequestTable">
+                    <tr>
+                        <th></th>
+                        <th>Request ID</th>
+                        <th>Event Date</th>
+                        <th>Event Type</th>
+                        <th>Description</th>
+                        <th>Grading Format</th>
+                        <th>Projected Reimbursement Amount</th>
+                        <th>Reimbursement Awarded</th>
+                    </tr>
+                    <tr *ngFor="let request of filteredRequests">
+                        <td><input (change)="FieldsChange($event,request['id'])" value="angular" type="checkbox" /></td>
+                        <td>{{request["id"]}}</td>
+                        <td>{{request["eventDate"]}}</td>
+                        <td>{{request["eventType"]}}</td>
+                        <td>{{request["description"]}}</td>
+                        <td>{{request["gradingFormat"]}}</td>
+                        <td>{{request["projectedAmount"]}}</td>
+                        <td>{{request["awardedAmount"]}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <h5>Cancel the selected request(s)?</h5>
+                <button class='form-control' (click)='cancelRequests()'>
+                    Yes, Cancel Request(s)
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
